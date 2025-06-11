@@ -77,3 +77,6 @@ The nc command, short for Netcat, is a versatile command-line utility in Linux a
 
 ## Program Counter
 * A register within a CPU that keeps track of the memory address of the next instruction to be executed in a program. It essentially acts as a pointer to the next instruction, ensuring the CPU knows where to fetch the next piece of code to run. 
+
+## Executable and Linkable Format (ELF)
+* The Executable and Linkable Format(ELF, formerly named Extensible Linking Format) is a common standard file format for executable files, object code, shared libraries, and core dumps.

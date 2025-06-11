@@ -1,6 +1,13 @@
 ## Metaclass
+* A class that defines how other classes are created
+* It is often described as the "class of a class"
+
 
 ## Garbage Collection
+### Reference Counting
+    *  Python Stores the count of each object by the number of times it is referenced. When the reference is deleted (or goes out of scope), the count is decreased
+    * When the reference count hits 0, the object is destroyed
+
 
 ## ASGI (Asynchronous server gateway interface)
 * It's a specification that defines how web servers and frameworks communicate in Python, particularly when dealing with asynchronous operations
@@ -38,3 +45,53 @@ A modern, high-performance web framework for building APIs with Python. It's des
 * Threading creates new threads which run in parallel (they don't run parallely in Python because of GIL). This involves thread creation which has an overhead
 * Asyncio uses context switching to perform tasks in the same thread. 
 * Threading performs preemptive scheduling (which means that the OS handles the thread scheduling). Meanwhile asyncio uses co-operative scheduling which means the program has to yield control of the thread to the main thread which will handle the scheduling/processing. 
+
+
+## DSA
+### Min Heap
+* Used for finding the top k max elements in a list
+```
+    import heapq
+
+    # Create a list
+    my_list = [5, 2, 8, 1, 9, 4]
+
+    # Convert the list into a min-heap
+    heapq.heapify(my_list)
+    print(f"Min-heap: {my_list}")
+
+    # Insert a new element
+    heapq.heappush(my_list, 3)
+    print(f"Min-heap after insertion: {my_list}")
+
+    # Extract the smallest element
+    smallest = heapq.heappop(my_list)
+    print(f"Smallest element: {smallest}")
+    print(f"Min-heap after extraction: {my_list}")
+```
+
+### Max Heap
+* Used for getting the top n min elements in a list
+```
+    import heapq
+
+    class MaxHeap:
+        def __init__(self, max_length):
+            self.heap = []
+            self.max_length = max_length
+
+        def push(self, item):
+            if len(self.heap) < self.max_length:
+            heapq.heappush(self.heap, -item)
+            elif item > -self.heap[0]:
+                heapq.heapreplace(self.heap, -item)
+
+        def pop(self):
+            return -heapq.heappop(self.heap)
+
+        def peek(self):
+            return -self.heap[0]
+        
+        def is_empty(self):
+            return not self.heap
+```

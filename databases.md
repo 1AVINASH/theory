@@ -13,3 +13,12 @@
     * Builds on 2NF by eliminating transitive dependencies. 
     * Ensures that non-key attributes are only dependent on the primary key and not on any other non-key attributes. 
     * If a table has a column for "Department ID" and another column for "Department Name," and the Department Name is stored in the same table as the Department ID, 3NF would move the Department Name to a separate "Departments" table, reducing the redundancy by making the table only contain attributes that are directly dependent on the primary key. 
+
+
+## Data Lake
+* Storage repository for storing large amounts of raw, unstructured data.
+* E.g.: S3
+
+## Data warehouse
+* Stores pre processed, structured data for analysis
+* Redshift, pSQL, Snowflake
