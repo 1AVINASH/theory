@@ -44,3 +44,8 @@
 ### ARP (Address Resolution Protocol)
 
 
+### Network Time Protocol (NTP)
+* The Network Time Protocol (NTP) is a network protocol used to synchronize the clocks of computer systems over packet-switched networks. It ensures that all computers on a network have the same accurate time, which is crucial for various applications, including logging, security, and distributed systems. 
+* NTP uses a hierarchical system of time sources, with Stratum 0 devices (like atomic clocks) as the most accurate and authoritative time sources. Stratum 1 servers synchronize with these sources, and subsequent servers synchronize with their predecessors. 
+* NTP operates on a client-server model, where servers provide time information to clients, which then adjust their clocks accordingly. 
+* NTP relies on the User Datagram Protocol (UDP), which provides a lightweight and fast way to transmit time synchronization information over the network. 

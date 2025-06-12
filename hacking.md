@@ -91,3 +91,7 @@
 ### Fork Bomb
 * Fork Bomb is a program that harms a system by making it run out of memory. 
 * It forks processes infinitely to fill memory. The fork bomb is a form of denial-of-service (DoS) attack against a Linux based system.
+
+
+### Dirb
+* Dirb is a directory scanner tool that runs with a list of words (provides a default set of words) and checks if there are any vulnerabilities found on the app

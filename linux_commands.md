@@ -11,3 +11,51 @@
 
 ## GDB (Gnu Debugger)
 * Command line debugger for inspecting the flow of a program when they are running
+
+## Commands to look for
+ncdu
+duff
+ripGrep or rg
+mosh
+lshw
+mtr
+fd
+fzf
+ranger
+zoxide or z
+exa
+glances
+iotop
+stat
+dstack
+watch
+progress
+dig
+dog
+tcpdump
+tshark
+termshark
+lsof
+ipcalc
+wormhole
+systemd-analyze blame
+systemd-analyze critical-chain
+ps
+procs
+lazydocker
+rsync
+rm
+shred
+moreutils (which includes)
+ts
+errno
+ifdata
+vidir
+vip
+unp
+jq
+taskwarrior
+### asciinema or asc
+* Record terminal session and play it back
+fabric
+ollama

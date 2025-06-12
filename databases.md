@@ -22,3 +22,29 @@
 ## Data warehouse
 * Stores pre processed, structured data for analysis
 * Redshift, pSQL, Snowflake
+
+## Graph Databases
+* Graph databases are specialized types of databases designed to store, query, and manage relationships between data efficiently. Unlike relational databases (which use tables), graph databases use nodes and edges
+    * Nodes represent entities (e.g., people, places, things)
+    * Edges represent relationships between them (e.g., "knows", "located in", "follows")
+* They are ideal for scenarios with complex and interconnected data, such as:
+    * Social networks (users, friends, followers)
+    * Recommendation engines (users, products, ratings)
+    * Fraud detection (transactions, devices, locations)
+    * Knowledge graphs (concepts and their relationships)
+
+## Geospatial Indexes
+* Geospatial indexes are special data structures that allow a database to efficiently store, search, and query spatial data—that is, data representing physical locations on Earth (e.g., latitude and longitude, shapes, distances, areas).
+* They are like regular indexes (used to speed up data lookups) but optimized for:
+    * Points: GPS coordinates (e.g., lat=12.97, lon=77.59)
+    * Shapes: Polygons, lines, bounding boxes (e.g., a city boundary or a route)
+    * Distances: Radius-based lookups (e.g., "find all cafes within 5 km")
+* MongoDB also lets you create geospatial indexes (`db.places.createIndex({ location: "2d" })`). Here's how it works
+        * Internally MongoDB uses Google’s S2 Geometry Library, which:
+            * Projects Earth onto a cube
+            * Divides each face of the cube into a hierarchical grid of cells
+            * Each cell gets a unique ID
+            * These cell IDs are stored in a B-tree-like structure
+    * It maps your Point/Polygon → set of S2 cell IDs
+    * These IDs are encoded and stored in a B-tree
+    
