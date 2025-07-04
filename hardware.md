@@ -9,3 +9,4 @@
     * Accumulator (AC): Stores the result of arithmetic or logical operations. 
     * Memory Address Register (MAR): Holds the address of the memory location being accessed. 
     * Memory Data Register: Holds the data being transferred between the CPU and memory. 
+

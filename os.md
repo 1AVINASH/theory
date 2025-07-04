@@ -80,3 +80,26 @@ The nc command, short for Netcat, is a versatile command-line utility in Linux a
 
 ## Executable and Linkable Format (ELF)
 * The Executable and Linkable Format(ELF, formerly named Extensible Linking Format) is a common standard file format for executable files, object code, shared libraries, and core dumps.
+
+## 32 bit vs 64 bit Architectures
+* The terms "32-bit" and "64-bit" primarily refer to the width of the registers in a computer's Central Processing Unit (CPU) and the size of the memory addresses that the CPU can handle
+* A 32 bit cpu has registers that can hold 32 bits of data at a time, while a 64 bit cpu can hold 64 bits
+* More bits means a CPI can process larger chunks of information in a single operation
+* To access data in RAM, the CPU needs to know the memory address of the data. The number of bits are corelated with the maximum number of unique memory addresses the CPU can refer to
+* 32 bit systems can directly access up to 2^32 bits of memory (4 GBs). That means 32 bit systems can only utilize a maximum of 4 GBs of RAM
+* 64 bit systems can theoretically access up to 2^64 bits of memory (16 Exabytes).
+* A 64 bit processor can handle more data in a single clock cycle compared to a 32 bit processor. This allows for faster processing of large datasets and more complex computations
+* 64 bit systems can run for 32 bit and 64 bit softwares. On windows (x86) is used to define 32 bit programs
+
+## Pointers
+* A pointer takes 32 bits on a 32 bit system and 64 bits on a 64 bit system since it should be able to point to any of the 2^n combinations of memeory address in the system. That's why 32 bit programs can only point to 4GBs of location even if the RAM is more
+* When we inspect the value inside a pointer, it is usually a hexadecimal number
+* 0x prefix is used to signify it is a hexadecimal value (which is a convention)
+
+## Clock Cycle
+* A clock cycle, also known as a machine cycle or clock tick, is the fundamental unit of time in a computer's central processing unit (CPU). It represents a single, discrete operation of the CPU, involving tasks like fetching, decoding, executing, and storing instructions. The clock cycle's duration is determined by the clock signal's frequency, with a higher frequency meaning shorter clock cycles and faster processing. 
+* A CPU's operation is synchronized by a clock signal, which is a regular, oscillating pulse. 
+* The time between two consecutive rising or falling edges of the clock signal is the clock period or cycle time. 
+* The clock frequency (measured in Hertz - Hz, typically MHz or GHz) is the inverse of the clock period, representing how many clock cycles occur per second.
+* The CPU's speed is directly related to its clock frequency. A higher clock frequency means the CPU can perform more operations in a given time. 
+*  Each clock cycle allows the CPU to perform a specific operation, such as fetching an instruction from memory, decoding it, executing it, and storing the result. 

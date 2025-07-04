@@ -14,3 +14,9 @@
 ### Salting
 * It involves adding a random string (the "salt") to the data before it's hashed
 * This randomness ensures that even if two users have the same password, their hashes will be different. This is crucial for password security because it makes it much harder for attackers to use pre-computed tables (like rainbow tables) to crack passwords. 
+
+### Hexadecimal
+* Base 16 numerical system
+* Since we have only 10 numeric digits, we use 6 letters as well to represent 16 symbols in hexadecimal systems
+    * 0-9, A = 10, B = 11, C = 12, D = 13, E = 14, F = 15
+* To represent 1111 of binary in hexadecimal, we will just need 1 symbol (F). Hence, to represent a number of 4 symbols, we just need 1 symbol. Hence, 32 bits can be represented in just 8 symbols in hexadecimal
