@@ -20,3 +20,9 @@
 * Since we have only 10 numeric digits, we use 6 letters as well to represent 16 symbols in hexadecimal systems
     * 0-9, A = 10, B = 11, C = 12, D = 13, E = 14, F = 15
 * To represent 1111 of binary in hexadecimal, we will just need 1 symbol (F). Hence, to represent a number of 4 symbols, we just need 1 symbol. Hence, 32 bits can be represented in just 8 symbols in hexadecimal
+
+
+### HMAC (Hash based Message Authentication Code)
+* Hashing: A hash function takes an input and produces a fixed-size output (a hash or digest). Hash are usually one way
+* MAC (Message Authentication Code): A mac is used to verify both the integrity (that the message hasn't been tampered with) and the authenticity (that the message came from a legitimate sender) of a message
+* Keyed Hash: HMAC enhances a regular hash function by incorporating a secret key. Instead of just hashing the data, HMAC mixes the secret key with the data before hashing. This means that only someone who possesses the exact same secret key can re-create the correct hash for a given message
