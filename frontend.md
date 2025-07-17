@@ -35,7 +35,13 @@ Promises are used to manage asynchronous code more effectively, offering a clean
 * Curly brackets are also used for jsx expressions, i.e., embedding javascript expressions within the HTML-like structure
 * Usually curly brackets can be used for destructuring but for destructuring arrays, square brackets are used
 
-
+### DOM (Document Object Model)
+* Programming interface for documents, specifically HTML and XML. 
+* Represents the structure if a dicynebt as a tree of objects allowing programming languages like Javascript to interact with and modify the content, structure, and style of a web page dynamically
+* It organizes the elements of an HTML or XML document in a hierarchical, tree like structure. Each element, attribute, and piece of text in the document is represented as a "node" within this tree
+* Each node in the DOM tree is an object, meaning it has properties and methods
 ---
 
 * All the divs and html is rendered first, and the hooks are triggered once they are completed
+
+
