@@ -14,6 +14,15 @@
 * In JavaScript, a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It acts as a placeholder for a value that is not yet available but will be at some point in the future. 
 Promises are used to manage asynchronous code more effectively, offering a cleaner and more readable alternative to traditional callback functions, which can lead to "callback hell" in complex scenarios.
 
+## Side Effect
+* It refers to any operation which has any effect outside the component's immediate rendering logic and its internal state/props. Essentially, it's anything that can cause an observable change outside the component
+* Common examples of side effects
+    * Making async requests to an API or server
+    * Manipulaing the document object model directly (like changing the page title, adding or removing classes, or manipulating elements outisde of React's virtual DOM)
+    * Using setTimeout or setInterval
+    * Interacting with browser APIs like localStorage, sessionStorage, etc.
+* They are called side effects because unlike normal functions that behave predictively, these functions can modify values outside their scope, thus introducing an element of unpredictability.
+* In react, useEffect hook can be used for managing side effects
 
 ## == vs ===
 * In JavaScript, == (loose equality) and === (strict equality) are both used for comparison, but they differ in how they handle type coercion:
@@ -60,6 +69,10 @@ function ParentComponent() {
 
 
 ```
+### UseCallback vs UseEffect
+* The callback function passed to useEffect runs after every render where its dependencies have changed. It can also run on component mount and cleanup on unmount.
+* UseCallback prevents re-rendering of function even on component re-renders unless something in the dependency array is changed
+
 
 ### Round vs Curly Brackets in JS
 * Round brackets are primarily used for control flow, function-related operations, and grouping expressions.
