@@ -25,9 +25,41 @@ Promises are used to manage asynchronous code more effectively, offering a clean
 ### UseEffect
 * Used to perform methods whenever an object's value changes
 * In the return method of such components, you can define functions which will be used as destructors for this method
+* Primarily used for managing side effects in functional components. Side effects include data fetching, subscriptions, manual DOM manipulations, and setting up event listeners
 
 ### UseState
 
+### UseCallback
+* React Hook that memoizes a function definition, preventing its re-creation on every render of a component, unless its dependencies change. This is a performance optimization technique primarily used in scenarios where referential equality of functions is important,
+* useCallback takes two arguments:
+    * The function to memoize: This is the callback function you want to prevent from being recreated on every render.
+    * A dependency array: This array contains values (props, state, or other variables) that the memoized function depends on. The function will only be re-created if any of these dependencies change.
+* ```
+import React, { useState, useCallback } from 'react';
+
+function ParentComponent() {
+  const [count, setCount] = useState(0);
+
+  // Without useCallback, this function would be recreated on every render
+  // const handleClick = () => {
+  //   setCount(prevCount => prevCount + 1);
+  // };
+
+  // With useCallback, this function is only recreated when 'count' changes
+  const handleClick = useCallback(() => {
+    setCount(prevCount => prevCount + 1);
+  }, []); // Empty dependency array means it's created once and never changes
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <ChildComponent onClick={handleClick} />
+    </div>
+  );
+}
+
+
+```
 
 ### Round vs Curly Brackets in JS
 * Round brackets are primarily used for control flow, function-related operations, and grouping expressions.
